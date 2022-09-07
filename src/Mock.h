@@ -148,35 +148,6 @@ namespace mock {
             };
 
 
-
-//            //-------------------------------------------------------------------------
-//            /*!
-//                @brief  Gets the current value used in the mocked analogRead().
-//                Can be changed with a call to setAnalogValue(new_value).
-//                @return The used 'analog_read_value', which is default to zero.
-//            */
-//            //-------------------------------------------------------------------------
-//            uint16_t getAnalogValue(void) {
-//            	return analog_read_value ;
-//            };
-//
-//
-//
-//
-//            //-------------------------------------------------------------------------
-//            /*!
-//                @brief  Sets a new return value for mocked analogRead().
-//                @param  new_value
-//                        Inject value for mocked analogRead().
-//            */
-//            //-------------------------------------------------------------------------
-//            void setAnalogValue(uint16_t new_value) { analog_read_value = new_value ; };
-//
-//        private:
-//
-//            uint16_t analog_read_value; ///< An optional new return value for the mocked analogRead()
-
-
     };  /*  class Mock */
 
 }  /* namespace mock */
