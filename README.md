@@ -1,7 +1,7 @@
 [![GitHub license](https://img.shields.io/github/license/berrak/Mock.svg?logo=gnu&logoColor=ffffff)](https://github.com/berrak/My_Macros/blob/master/LICENSE)
 [![GitHub version](https://img.shields.io/github/release/berrak/Mock.svg?logo=github&logoColor=ffffff)](https://github.com/berrak/My_Macros/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/berrak/Mock.svg?logo=github&logoColor=ffffff)](https://github.com/berrak/Mock/issues)
-[![Documentation](https://img.shields.io/badge/documentation-doxygen-green.svg)](http://berrak.github.io/Mock/)
+[![Documentation](https://img.shields.io/badge/documentation-doxygen-green.svg)](https://berrak.github.io/Mock/classmock_1_1Mock.html)
 
 # Arduino library Mock
 Replace Arduino methods with `mocked` versions and let you develop code without the hardware. The mocked functions return immediately or return zero. Run parallel hardware and system development for greater efficiency. Arduino's command line tool, such as [arduino-cli](https://github.com/arduino/arduino-cli), frees you from Arduino IDE for tests and uploads.
@@ -48,7 +48,7 @@ In Arduino IDE scroll down the long list below `File->Examples` and find `Mock`.
 
 ## Documentation (GitHub Pages - Doxygen)
 
-[Library documentation](https://berrak.github.io/Mock/).
+[Library documentation](https://berrak.github.io/Mock/classmock_1_1Mock.html).
 
 ## How to Install
 
