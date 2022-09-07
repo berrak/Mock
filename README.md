@@ -141,7 +141,7 @@ demock other.cpp
 
 ## Planned Improvements/Changes
 
-For planned changes, improvements, and known bugs, please visit the [Github issues tracker](https://github.com/beerak/Mock/issues). Unfortunately, they're not yet 100% coverage of Arduino methods, but only the most common. Testing more on other architectures and boards than Arduino Uno is also on the list of upcoming activities.
+For planned changes, improvements, and known bugs, please visit the [Github issues tracker](https://github.com/berrak/Mock/issues). Unfortunately, they're not yet 100% coverage of Arduino methods, but only the most common. Testing more on other architectures and boards than Arduino Uno is also on the list of upcoming activities.
 
 ## Other related libraries
 
