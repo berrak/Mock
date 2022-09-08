@@ -24,17 +24,17 @@
 using namespace mock;
 
 // Defaults for an Arduino Uno
-#define MVVCC 5000    // microcontroller VCC in millivolt
-#define ADC_BITS 1024 // microcontroller ADC bits resolution
-#define PWM 128       // 50% PWM duty cycle
+#define MVVCC 5000			// microcontroller VCC in millivolt
+#define ADC_BITS 1024		// microcontroller ADC bits resolution
+#define PWM 128             // 50% PWM duty cycle
 
 int dwrite_pin = 13;
-int awrite_pin = 9;
-int dread_pin = 8;
-int aread_pin = A0;
+int awrite_pin = 9 ;
+int dread_pin  = 8 ;
+int aread_pin = A0 ;
 
-int map_in_value = ADC_BITS / 2;
-long mapped_value = Mock::map(map_in_value, aread_pin, ADC_BITS - 1, aread_pin, MVVCC);
+int map_in_value = ADC_BITS/2;
+long mapped_value = Mock::map(map_in_value, aread_pin, ADC_BITS-1, aread_pin, MVVCC);
 
 void setup() {
 
@@ -43,11 +43,11 @@ void setup() {
     Serial.println("Mocked methods returns zero, or returns directly.");
 
     // Mocked calls
-    Mock::pinMode(dwrite_pin, OUTPUT); // digitalWrite
-    Mock::pinMode(awrite_pin, OUTPUT); // analogWrite
+    Mock::pinMode(dwrite_pin,OUTPUT);		// digitalWrite
+    Mock::pinMode(awrite_pin,OUTPUT);		// analogWrite
 
-    Mock::pinMode(dread_pin, INPUT_PULLUP); // digitalRead
-    Mock::pinMode(aread_pin, INPUT);        // analogRead - optional
+    Mock::pinMode(dread_pin,INPUT_PULLUP);	// digitalRead
+    Mock::pinMode(aread_pin,INPUT);       	// analogRead - optional
 }
 
 void loop() {
@@ -59,13 +59,13 @@ void loop() {
     Serial.println(Mock::analogRead(aread_pin));
 
     Serial.print("Mock::digitalRead(): ");
-    Serial.println(Mock::digitalRead(dread_pin));
+    Serial.println(Mock::digitalRead (dread_pin));
 
     Serial.println("Mock::analogWrite(): NOP");
-    Mock::analogWrite(awrite_pin, PWM);
+    Mock::analogWrite (awrite_pin, PWM); 
 
     Serial.print("Mock::analogRead(): ");
-    Serial.println(Mock::analogRead(aread_pin));
+    Serial.println(Mock::analogRead (aread_pin));
 
     // map() is not mocked, but included in the
     // library for Arduino method completeness
@@ -76,6 +76,7 @@ void loop() {
 
     delay(3000);
     Serial.println();
+
 }
 
 // Mocked 10 x blink LED_BUILTIN
@@ -83,7 +84,7 @@ void testMockedDigitalWrite(void) {
 
 #ifdef LED_BUILTIN
     Serial.println("10 x Mock::digitalWrite() - LED_BUILTIN will not blink");
-    for (int cnt = 0; cnt < 10; cnt++) {
+    for (int cnt = 0; cnt < 10 ; cnt++){
         Mock::digitalWrite(LED_BUILTIN, HIGH);
         delay(125);
         Mock::digitalWrite(LED_BUILTIN, LOW);
@@ -93,3 +94,4 @@ void testMockedDigitalWrite(void) {
 }
 
 #endif // ARDUINO
+
