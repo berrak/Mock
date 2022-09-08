@@ -1,6 +1,6 @@
 #!/bin/bash
 #
-# demock - Shell script to remove Mock-fragments in the C++ build-process.
+# make-demock.sh - Shell script to remove Mock-fragments in the C++ build-process.
 # Author: Debinix Team (c). The MIT License.
 # Date: 2022-09-07.
 #

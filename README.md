@@ -64,12 +64,12 @@ or use the alternative manual installation procedure.
 
 ## Ensure any mock-fragments are removed in the build process
 
-Now we will create a command script called `demock`. Open an editor and copy the script content below. The `script` folder includes the code as well.
+Now we will create a command script called `make-demock.sh`. Open an editor and copy the script content below. The `script` folder includes the code as well.
 
 ```bash
 #!/bin/bash
 #
-# demock - Shell script to remove Mock-fragments in the C++ build-process.
+# make-demock.sh - Shell script to remove Mock-fragments in the C++ build-process.
 # Author: Debinix Team (c). The MIT License.
 # Date: 2022-09-07.
 #
@@ -130,13 +130,14 @@ echo "All done and checked!"
 
 Move this file to the `~/.local/bin` folder, and make it executable:
 ```
-$ mv demock ~/.local/bin
-$ chmod u+x ~/.local/bin/demock
+$ mv make-demock.sh ~/.local/bin
+$ chmod u+x ~/.local/bin/make-demock.sh
 ```
 Run it with the file name, as the argument, like so.
-```cpp
-demock sketch.ino
-demock other.cpp
+```
+make-demock.sh sketch.ino
+make-demock.sh other.cpp
+make-demock.sh other.h
 ```
 
 ## Planned Improvements/Changes
