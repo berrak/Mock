@@ -2,6 +2,7 @@
 [![GitHub version](https://img.shields.io/github/release/berrak/Mock.svg?logo=github&logoColor=ffffff)](https://github.com/berrak/My_Macros/releases/latest)
 [![GitHub issues](https://img.shields.io/github/issues/berrak/Mock.svg?logo=github&logoColor=ffffff)](https://github.com/berrak/Mock/issues)
 [![Documentation](https://img.shields.io/badge/documentation-doxygen-green.svg)](https://berrak.github.io/Mock/classmock_1_1Mock.html)
+[![Installation instructions](https://www.ardu-badge.com/badge/Mock.svg?)](https://www.ardu-badge.com/Mock)
 
 # Arduino library Mock
 Replace Arduino methods with `mocked` versions and let you develop code without the hardware. The mocked functions return immediately or return zero. Run parallel hardware and system development for greater efficiency. Arduino's command line tool, such as [arduino-cli](https://github.com/arduino/arduino-cli), frees you from Arduino IDE for tests and uploads.
@@ -11,7 +12,7 @@ Replace Arduino methods with `mocked` versions and let you develop code without 
 - Develop software independently of any related parallel hardware project.
 - Use any development environment or your favorite editor with `arduino-cli` and library `Mock`.
 - Use existing well-known tools for debugging.
-- Reach set time goals faster in any Arduino microcontroller project.  
+- Reach set time goals faster in any Arduino microcontroller project.
 
 The purpose of this library is to be a practical eye-opener on mocked object usage, at least for some early phases of the project development cycle.
 
@@ -35,7 +36,7 @@ The mocked functions return immediately or return zero. To remove all mocking fr
 
 ## Examples
 
-In Arduino IDE scroll down the long list below `File->Examples` and find `Mock`. An example run of the example may look like the following screen output. Note that a majority of the mocked methods return zero or return immediately. The `map()`-call is an exception and is defined as in Arduino. 
+In Arduino IDE scroll down the long list below `File->Examples` and find `Mock`. An example run of the example may look like the following screen output. Note that a majority of the mocked methods return zero or return immediately. The `map()`-call is an exception and is defined as in Arduino.
 ```
 Mock::millis(): 0
 Mock::analogRead(): 0
