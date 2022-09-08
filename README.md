@@ -36,14 +36,14 @@ The mocked functions return immediately or return zero. To remove all mocking fr
 ## Examples
 
 In Arduino IDE scroll down the long list below `File->Examples` and find `Mock`. An example run of the example may look like the following screen output. Note that a majority of the mocked methods return zero or return immediately. The `map()`-call is an exception and is defined as in Arduino. 
-```cpp
-14:51:30.220 -> Mock::millis(): 0
-14:51:30.253 -> Mock::analogRead(): 0
-14:51:30.286 -> Mock::digitalRead(): 0
-14:51:30.319 -> Mock::analogWrite(): NOP
-14:51:30.319 -> Mock::analogRead(): 0
-14:51:30.353 -> The map() return value should be ~2500: 2474
-14:51:30.419 -> 10 x Mock::digitalWrite() - LED_BUILTIN will not blink
+```
+Mock::millis(): 0
+Mock::analogRead(): 0
+Mock::digitalRead(): 0
+Mock::analogWrite(): NOP
+Mock::analogRead(): 0
+The map() return value should be ~2500: 2474
+10 x Mock::digitalWrite() - LED_BUILTIN will not blink
 ```
 
 ## Documentation (GitHub Pages - Doxygen)
