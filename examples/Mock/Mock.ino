@@ -21,6 +21,7 @@
 //============================================================================
 
 #include <Mock.h>
+
 using namespace mock;
 
 // Defaults for an Arduino Uno

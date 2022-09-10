@@ -12,6 +12,8 @@
 
 #ifndef ARDUINO
 #include <cstdint>
+#include <thread>
+#include <iostream>
 #endif
 
 /*!
@@ -22,110 +24,112 @@
 //! Arduino mocked methods
 namespace mock {
 
-//-------------------------------------------------------------------------
-/*!
-    @brief  Arduino Mock methods and mocked Arduino language constructs.
-*/
-//-------------------------------------------------------------------------
+	//-------------------------------------------------------------------------
+	/*!
+		@brief  Arduino Mock methods and mocked Arduino language constructs.
+	*/
+	//-------------------------------------------------------------------------
     class Mock
     {
         public:
 
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             /*!
                 @brief  Constructor.
             */
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             Mock(void){};
 
-
-
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             /*!
                 @brief  Deallocate Mock object.
             */
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             ~Mock(void){};
 
+            // ----------------- Arduino Digital I/O --------------------------
 
-
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             /*!
-                @brief  Mocked version of Arduino millis().
-                @return The mocked millis() value, i.e., zero.
-            */
-            //-------------------------------------------------------------------------
-            static uint32_t millis(void){ return 0L; };
-
-
-
-            //-------------------------------------------------------------------------
-            /*!
-                @brief  Mocked version of Arduino pinMode() returns without action.
-                @param  pin
-                        Arduino pin number to set the mode.
-                @param  mode
-                        Sets the mode to INPUT, OUTPUT, or INPUT_PULLUP.
-            */
-            //-------------------------------------------------------------------------
-            static void pinMode(uint8_t pin, uint8_t mode){};
-
-
-
-            //-------------------------------------------------------------------------
-            /*!
-                @brief  Mocked version of Arduino digitalWrite() returns without action.
-                @param  pin
-                        Arduino pin number for write.
-                @param  value
-                        Value is either HIGH or LOW.
-            */
-            //-------------------------------------------------------------------------
-            static void digitalWrite(uint8_t pin, uint8_t value){};
-
-
-
-            //-------------------------------------------------------------------------
-            /*!
-                @brief  Mocked version of Arduino digitalRead().
+                @brief  Mocked Arduino digitalRead().
                 @param  pin
                         The digital pin to read from.
                 @return The mocked digitalRead() value, i.e., zero.
             */
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             static uint16_t digitalRead(uint8_t pin){
             	return 0;
             };
 
 
-
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             /*!
-                @brief  Mocked version of Arduino analogWrite() returns without action.
+                @brief  Mocked Arduino digitalWrite() returns without action.
                 @param  pin
-                        The analog pin to write to.
+                        Arduino pin number for write.
                 @param  value
-                        The duty cycle: between 0 (always off) and 255 (always on).
+                        Value is either HIGH or LOW.
             */
-            //-------------------------------------------------------------------------
-            static void analogWrite(uint8_t pin, uint16_t value){};
+            //-----------------------------------------------------------------
+            static void digitalWrite(uint8_t pin, uint8_t value){};
 
 
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             /*!
-                @brief  Mocked version of Arduino analogRead().
+                @brief  Mocked Arduino pinMode() returns without action.
+                @param  pin
+                        Arduino pin number to set the mode.
+                @param  mode
+                        Sets the mode to INPUT, OUTPUT, or INPUT_PULLUP.
+            */
+            //-----------------------------------------------------------------
+            static void pinMode(uint8_t pin, uint8_t mode){};
+
+
+            //------------------ Arduino Analog I/O ---------------------------
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked Arduino analogRead().
                 @param  pin
                         The analog pin to read from.
                 @return The mocked analogRead() value, i.e., zero.
             */
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             static uint16_t analogRead(uint8_t pin){
             	return 0 ;
             };
 
 
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked Arduino analogWrite() returns without action.
+                @param  pin
+                        The analog pin to write to.
+                @param  value
+                        The duty cycle: between 0 (off) and 255 (on).
+            */
+            //-----------------------------------------------------------------
+            static void analogWrite(uint8_t pin, uint16_t value){};
 
-            //-------------------------------------------------------------------------
+
+            // --------------------- Arduino Time -----------------------------
+
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked Arduino millis().
+                @return Returns 0.
+            */
+            //-----------------------------------------------------------------
+            static uint32_t millis(void){
+            	return 0L;
+            };
+
+
+            // --------------------- Arduino Math -----------------------------
+
+            //-----------------------------------------------------------------
             /*!
                 @brief  Re-maps a number from one range to another. That is, a value of
                         in_min would get mapped to out_min, a value of in_max to out_max,
@@ -142,7 +146,7 @@ namespace mock {
                         The upper bound of the value’s target range.
                 @return The mapped value.
             */
-            //-------------------------------------------------------------------------
+            //-----------------------------------------------------------------
             static uint32_t map(uint32_t in_value, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max) {
                 return ((in_value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
             };

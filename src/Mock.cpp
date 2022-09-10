@@ -24,4 +24,3 @@
 #endif
 // class interface declaration
 #include "Mock.h"
-
