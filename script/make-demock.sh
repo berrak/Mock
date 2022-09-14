@@ -50,6 +50,11 @@ if grep -n "Mock::" "$fname" ; then
   exit 1
 fi
 
+if grep -n "MockEEPROM::" "$fname" ; then
+  echo "Error: 'Mock::' was not cleansed in the file."
+  exit 1
+fi
+
 if grep -n "#include <Mock.h>" "$fname" ; then
   echo "Error: '#include <Mock.h>' was not cleansed in the file."
   exit 1
