@@ -2,7 +2,7 @@
 #
 # make-demock.sh - Shell script to remove Mock-fragments in the C++ build-process.
 # Author: Debinix Team (c). The MIT License.
-# Date: 2022-09-07.
+# Date: 2022-09-14.
 #
 
 case $# in
@@ -33,9 +33,14 @@ fi
 
 echo "De-mocking '$fname' ..."
 
-rpl -m --fixed-strings "Mock::" "" "$fname"
-rpl -m --fixed-strings "#include <Mock.h>" "" "$fname"
-rpl -m --fixed-strings "using namespace mock;" "" "$fname"
+# Arduino methods fragment democked with ''.
+rpl -m --fixed-strings 'Mock::' '' "$fname"
+rpl -m --fixed-strings '#include <Mock.h>' '' "$fname"
+rpl -m --fixed-strings 'using namespace mock' '' "$fname"
+
+# Mocked EEPROM library fragment democked with ''.
+rpl -m --fixed-strings 'MockEEPROM::' '' "$fname"
+rpl -m --fixed-strings '#include <MockEEPROM.h>' '' "$fname"
 
 echo "Cleansing done!"
 echo "Checking that all mock fragments are gone with grep ..."
@@ -50,10 +55,21 @@ if grep -n "#include <Mock.h>" "$fname" ; then
   exit 1
 fi
 
-if grep -n "using namespace mock;" "$fname" ; then
-  echo "Error: 'using namespace mock;' was not cleansed in the file."
+if grep -n "using namespace mock" "$fname" ; then
+  echo "Error: 'using namespace mock' was not cleansed in the file."
   exit 1
 fi
 
-echo "All done and checked!"
+# These two tests should cover it all
+if grep -n "Mock" "$fname" ; then
+  echo "Error: The 'Mock' word was not cleansed in the file."
+  exit 1
+fi
+
+if grep -n "mock" "$fname" ; then
+  echo "Error: The 'mock' word was not cleansed in the file."
+  exit 1
+fi
+
+echo "ALL DEMOCKING DONE AND CHECKED -> OK!"
 # EOF

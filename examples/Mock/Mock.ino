@@ -21,7 +21,6 @@
 //============================================================================
 
 #include <Mock.h>
-
 using namespace mock;
 
 // Defaults for an Arduino Uno
@@ -41,14 +40,16 @@ void setup() {
 
     Serial.begin(9600);
     delay(2000);
-    Serial.println("Mocked methods returns zero, or returns directly.");
 
-    // Mocked calls
+    Serial.println("Mocked Ardiono methods returns zero, or returns directly.");
+
+    // Mocked Arduino calls
     Mock::pinMode(dwrite_pin,OUTPUT);		// digitalWrite
     Mock::pinMode(awrite_pin,OUTPUT);		// analogWrite
 
     Mock::pinMode(dread_pin,INPUT_PULLUP);	// digitalRead
     Mock::pinMode(aread_pin,INPUT);       	// analogRead - optional
+
 }
 
 void loop() {

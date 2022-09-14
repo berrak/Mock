@@ -24,6 +24,7 @@
 //! Arduino mocked methods
 namespace mock {
 
+
 	//-------------------------------------------------------------------------
 	/*!
 		@brief  Arduino Mock methods and mocked Arduino language constructs.
@@ -151,6 +152,96 @@ namespace mock {
                 return ((in_value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);
             };
 
+        	// ------------------ Arduino EEPROM library -----------------------
+
+			// Mocked EEPROM library methods
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked EEPROM read().
+                @param  address
+                        Read a byte from EEPROM address.
+                @return The mocked read() value, i.e., zero.
+            */
+            //-----------------------------------------------------------------
+			static uint16_t read(uint16_t address) { return 0; };
+
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked EEPROM write() returns without action.
+                @param  address
+                        The EEPROM address to write a byte.
+                @param  value
+                        The value (byte) to write at that address.
+            */
+            //-----------------------------------------------------------------
+			static void write(uint16_t address, uint16_t value){};
+
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked EEPROM update() returns without action.
+                @param  address
+                        The EEPROM address to write a byte.
+                @param  value
+                        The value to write (byte), if different at that address.
+            */
+            //-----------------------------------------------------------------
+			static void update(uint16_t address, uint16_t value){};
+
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked EEPROM get().
+                @param  address
+                        Read from EEPROM address.
+                @param  data
+                        Read data from EEPROM address.
+                @return The mocked get() value, i.e., zero.
+            */
+            //-----------------------------------------------------------------
+			static uint16_t get(uint16_t, uint16_t) { return 0; };
+
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked EEPROM put().
+                @param  address
+                        The EEPROM address to write a byte.
+                @param  data
+                        Write data to EEPROM address.
+            */
+            //-----------------------------------------------------------------
+			static void put(uint16_t address, uint16_t data ){};
+
+
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked EEPROM length().
+                @return The mocked length() value, i.e., zero.
+            */
+            //-----------------------------------------------------------------
+			static uint16_t length(void) { return 0; };
+
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked EEPROM begin().
+                @return The mocked begin() value, i.e., hex zero.
+            */
+            //-----------------------------------------------------------------
+			static uint16_t begin(void){ return 0x00; };
+
+
+            //-----------------------------------------------------------------
+            /*!
+                @brief  Mocked EEPROM end().
+                @return The mocked end() value, i.e., zero length.
+            */
+            //-----------------------------------------------------------------
+			static uint16_t end(void) { return 0; };
+
 
     };  /*  class Mock */
 
@@ -159,6 +250,7 @@ namespace mock {
 /*! @} End of Doxygen Groups*/
 
 #ifndef ARDUINO
+
 #define HIGH 0x1            ///< Arduino definition for HIGH
 #define LOW  0x0            ///< Arduino definition for LOW
 
@@ -177,6 +269,7 @@ typedef uint16_t word;
 typedef bool boolean;
 /** Arduino typedef for byte */
 typedef uint8_t byte;
+
 #endif
 
 #endif /* MOCK_H_ */
