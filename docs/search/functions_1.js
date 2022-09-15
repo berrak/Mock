@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['digitalread_28',['digitalRead',['../classmock_1_1Mock.html#ae37b13d795466a57f1e03eeb35cbf8cd',1,'mock::Mock']]],
-  ['digitalwrite_29',['digitalWrite',['../classmock_1_1Mock.html#ab7a4ea00836315cb7ab14ca34cae6488',1,'mock::Mock']]]
+  ['begin_36',['begin',['../classmock_1_1Mock.html#ac0106bb43262c54ec9513e199a1ca1cb',1,'mock::Mock']]]
 ];

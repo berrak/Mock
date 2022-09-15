@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['setanalogvalue_38',['setAnalogValue',['../classmock_1_1Mock.html#a9da525c94b4840aafc37d0a91e7ec538',1,'mock::Mock']]]
+  ['length_41',['length',['../classmock_1_1Mock.html#aa31720511f55e998463e938d38b4e201',1,'mock::Mock']]]
 ];

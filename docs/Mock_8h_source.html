@@ -23,7 +23,7 @@
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Debinix Team Library Mock
    </div>
-   <div id="projectbrief">The Arduino library replaces Arduino methods with mock methods and lets you develop code without the hardware.</div>
+   <div id="projectbrief">Project development in parallel for hardware and software teams.</div>
   </td>
  </tr>
  </tbody>
@@ -72,117 +72,189 @@ $(function() {
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#ifndef ARDUINO</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#include &lt;cstdint&gt;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="namespacemock.html">   23</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemock.html">mock</a> {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="comment"></span><span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html">   30</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmock_1_1Mock.html">Mock</a> {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#adca4d04617cf39d2747fe3d529fa6b9e">   37</a></span>&#160;    <a class="code" href="classmock_1_1Mock.html#adca4d04617cf39d2747fe3d529fa6b9e">Mock</a>(<span class="keywordtype">void</span>){};</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ad7bbb80e7695a093141d25c7b2238767">   44</a></span>&#160;    <a class="code" href="classmock_1_1Mock.html#ad7bbb80e7695a093141d25c7b2238767">~Mock</a>(<span class="keywordtype">void</span>){};</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a6bc20ce8e36ab430d0a51b0621c6019f">   52</a></span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="classmock_1_1Mock.html#a6bc20ce8e36ab430d0a51b0621c6019f">millis</a>(<span class="keywordtype">void</span>) { <span class="keywordflow">return</span> 0L; };</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a8d571a2437ee032c58c2db3d530e3832">   63</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#a8d571a2437ee032c58c2db3d530e3832">pinMode</a>(uint8_t pin, uint8_t mode){};</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ab7a4ea00836315cb7ab14ca34cae6488">   74</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#ab7a4ea00836315cb7ab14ca34cae6488">digitalWrite</a>(uint8_t pin, uint8_t value){};</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ae37b13d795466a57f1e03eeb35cbf8cd">   84</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#ae37b13d795466a57f1e03eeb35cbf8cd">digitalRead</a>(uint8_t pin) { <span class="keywordflow">return</span> 0; };</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00095"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ab5c8d7f302bac02a9bbb3004e21fbb93">   95</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#ab5c8d7f302bac02a9bbb3004e21fbb93">analogWrite</a>(uint8_t pin, uint16_t value){};</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a2c5752e8199a329d04fed5198cd83724">  105</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#a2c5752e8199a329d04fed5198cd83724">analogRead</a>(uint8_t pin) { <span class="keywordflow">return</span> 0; };</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="comment"></span>    <span class="comment">//-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a51af691aeeb4bd147a362386fb9ce2ec">  125</a></span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="classmock_1_1Mock.html#a51af691aeeb4bd147a362386fb9ce2ec">map</a>(uint32_t in_value, uint32_t in_min, uint32_t in_max, uint32_t out_min,</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        uint32_t out_max) {</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordflow">return</span> ((in_value - in_min) * (out_max - out_min) / (in_max - in_min) + out_min);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;    };</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    <span class="comment">//            //-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    <span class="comment">//            /*!</span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    <span class="comment">//                @brief  Gets the current value used in the mocked analogRead().</span></div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="comment">//                Can be changed with a call to setAnalogValue(new_value).</span></div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">//                @return The used &#39;analog_read_value&#39;, which is default to zero.</span></div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">//            */</span></div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="comment">//            //-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">//            uint16_t getAnalogValue(void) {</span></div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <span class="comment">//              return analog_read_value ;</span></div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">//            };</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="comment">//            //-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    <span class="comment">//            /*!</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="comment">//                @brief  Sets a new return value for mocked analogRead().</span></div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    <span class="comment">//                @param  new_value</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    <span class="comment">//                        Inject value for mocked analogRead().</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="comment">//            */</span></div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="comment">//            //-------------------------------------------------------------------------</span></div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;    <span class="comment">//            void setAnalogValue(uint16_t new_value) { analog_read_value = new_value ; };</span></div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;    <span class="comment">//        private:</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;    <span class="comment">//</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;    <span class="comment">//            uint16_t analog_read_value; ///&lt; An optional new return value for the mocked analogRead()</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160; </div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;}; <span class="comment">/*  class Mock */</span></div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;} <span class="comment">/* namespace mock */</span></div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">#ifndef ARDUINO</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno"><a class="line" href="Mock_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">  164</a></span>&#160;<span class="preprocessor">#define HIGH 0x1 </span></div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="Mock_8h.html#ab811d8c6ff3a505312d3276590444289">  165</a></span>&#160;<span class="preprocessor">#define LOW 0x0  </span></div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno"><a class="line" href="Mock_8h.html#a1bb283bd7893b9855e2f23013891fc82">  167</a></span>&#160;<span class="preprocessor">#define INPUT 0x0        </span></div>
-<div class="line"><a name="l00168"></a><span class="lineno"><a class="line" href="Mock_8h.html#a61a3c9a18380aafb6e430e79bf596557">  168</a></span>&#160;<span class="preprocessor">#define OUTPUT 0x1       </span></div>
-<div class="line"><a name="l00169"></a><span class="lineno"><a class="line" href="Mock_8h.html#a6295096662a20dd56186396e535fbe92">  169</a></span>&#160;<span class="preprocessor">#define INPUT_PULLUP 0x2 </span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno"><a class="line" href="Mock_8h.html#aa39fdb6674592214dc56eacc0808eec4">  171</a></span>&#160;<span class="preprocessor">#define CHANGE 1  </span></div>
-<div class="line"><a name="l00172"></a><span class="lineno"><a class="line" href="Mock_8h.html#ac00eb6fc2047dc399280f31b0c5f4472">  172</a></span>&#160;<span class="preprocessor">#define FALLING 2 </span></div>
-<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="Mock_8h.html#aeea2b49478f3b13faedba764985c6e96">  173</a></span>&#160;<span class="preprocessor">#define RISING 3  </span></div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="comment">// Arduino standard typedef&#39;s</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno"><a class="line" href="Mock_8h.html#aacc262b7acb8ef2b1d38df8b855bc0f6">  177</a></span>&#160;<span class="comment"></span><span class="keyword">typedef</span> uint16_t <a class="code" href="Mock_8h.html#aacc262b7acb8ef2b1d38df8b855bc0f6">word</a>;</div>
-<div class="line"><a name="l00179"></a><span class="lineno"><a class="line" href="Mock_8h.html#af29b166bf5fea7f0bbc07f7014a8c6b5">  179</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">bool</span> <a class="code" href="Mock_8h.html#af29b166bf5fea7f0bbc07f7014a8c6b5">boolean</a>;</div>
-<div class="line"><a name="l00181"></a><span class="lineno"><a class="line" href="Mock_8h.html#ab8ef12fab634c171394422d0ee8baf94">  181</a></span>&#160;<span class="keyword">typedef</span> uint8_t <a class="code" href="Mock_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a>;</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MOCK_H_ */</span><span class="preprocessor"></span></div>
-<div class="ttc" id="aMock_8h_html_aacc262b7acb8ef2b1d38df8b855bc0f6"><div class="ttname"><a href="Mock_8h.html#aacc262b7acb8ef2b1d38df8b855bc0f6">word</a></div><div class="ttdeci">uint16_t word</div><div class="ttdef"><b>Definition:</b> Mock.h:177</div></div>
-<div class="ttc" id="aMock_8h_html_ab8ef12fab634c171394422d0ee8baf94"><div class="ttname"><a href="Mock_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a></div><div class="ttdeci">uint8_t byte</div><div class="ttdef"><b>Definition:</b> Mock.h:181</div></div>
-<div class="ttc" id="aMock_8h_html_af29b166bf5fea7f0bbc07f7014a8c6b5"><div class="ttname"><a href="Mock_8h.html#af29b166bf5fea7f0bbc07f7014a8c6b5">boolean</a></div><div class="ttdeci">bool boolean</div><div class="ttdef"><b>Definition:</b> Mock.h:179</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html"><div class="ttname"><a href="classmock_1_1Mock.html">mock::Mock</a></div><div class="ttdoc">Arduino Mock methods and mocked Arduino language constructs.</div><div class="ttdef"><b>Definition:</b> Mock.h:30</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_a2c5752e8199a329d04fed5198cd83724"><div class="ttname"><a href="classmock_1_1Mock.html#a2c5752e8199a329d04fed5198cd83724">mock::Mock::analogRead</a></div><div class="ttdeci">static uint16_t analogRead(uint8_t pin)</div><div class="ttdoc">Mocked version of Arduino analogRead().</div><div class="ttdef"><b>Definition:</b> Mock.h:105</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_a51af691aeeb4bd147a362386fb9ce2ec"><div class="ttname"><a href="classmock_1_1Mock.html#a51af691aeeb4bd147a362386fb9ce2ec">mock::Mock::map</a></div><div class="ttdeci">static uint32_t map(uint32_t in_value, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max)</div><div class="ttdoc">Re-maps a number from one range to another. That is, a value of in_min would get mapped to out_min,...</div><div class="ttdef"><b>Definition:</b> Mock.h:125</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_a6bc20ce8e36ab430d0a51b0621c6019f"><div class="ttname"><a href="classmock_1_1Mock.html#a6bc20ce8e36ab430d0a51b0621c6019f">mock::Mock::millis</a></div><div class="ttdeci">static uint32_t millis(void)</div><div class="ttdoc">Mocked version of Arduino millis().</div><div class="ttdef"><b>Definition:</b> Mock.h:52</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_a8d571a2437ee032c58c2db3d530e3832"><div class="ttname"><a href="classmock_1_1Mock.html#a8d571a2437ee032c58c2db3d530e3832">mock::Mock::pinMode</a></div><div class="ttdeci">static void pinMode(uint8_t pin, uint8_t mode)</div><div class="ttdoc">Mocked version of Arduino pinMode() returns without action.</div><div class="ttdef"><b>Definition:</b> Mock.h:63</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_ab5c8d7f302bac02a9bbb3004e21fbb93"><div class="ttname"><a href="classmock_1_1Mock.html#ab5c8d7f302bac02a9bbb3004e21fbb93">mock::Mock::analogWrite</a></div><div class="ttdeci">static void analogWrite(uint8_t pin, uint16_t value)</div><div class="ttdoc">Mocked version of Arduino analogWrite() returns without action.</div><div class="ttdef"><b>Definition:</b> Mock.h:95</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_ab7a4ea00836315cb7ab14ca34cae6488"><div class="ttname"><a href="classmock_1_1Mock.html#ab7a4ea00836315cb7ab14ca34cae6488">mock::Mock::digitalWrite</a></div><div class="ttdeci">static void digitalWrite(uint8_t pin, uint8_t value)</div><div class="ttdoc">Mocked version of Arduino digitalWrite() returns without action.</div><div class="ttdef"><b>Definition:</b> Mock.h:74</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_ad7bbb80e7695a093141d25c7b2238767"><div class="ttname"><a href="classmock_1_1Mock.html#ad7bbb80e7695a093141d25c7b2238767">mock::Mock::~Mock</a></div><div class="ttdeci">~Mock(void)</div><div class="ttdoc">Deallocate Mock object.</div><div class="ttdef"><b>Definition:</b> Mock.h:44</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_adca4d04617cf39d2747fe3d529fa6b9e"><div class="ttname"><a href="classmock_1_1Mock.html#adca4d04617cf39d2747fe3d529fa6b9e">mock::Mock::Mock</a></div><div class="ttdeci">Mock(void)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> Mock.h:37</div></div>
-<div class="ttc" id="aclassmock_1_1Mock_html_ae37b13d795466a57f1e03eeb35cbf8cd"><div class="ttname"><a href="classmock_1_1Mock.html#ae37b13d795466a57f1e03eeb35cbf8cd">mock::Mock::digitalRead</a></div><div class="ttdeci">static uint16_t digitalRead(uint8_t pin)</div><div class="ttdoc">Mocked version of Arduino digitalRead().</div><div class="ttdef"><b>Definition:</b> Mock.h:84</div></div>
-<div class="ttc" id="anamespacemock_html"><div class="ttname"><a href="namespacemock.html">mock</a></div><div class="ttdoc">Arduino mocked methods.</div><div class="ttdef"><b>Definition:</b> Mock.h:23</div></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#include &lt;thread&gt;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="namespacemock.html">   25</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacemock.html">mock</a> {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="comment">//-------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"></span><span class="comment">//-------------------------------------------------------------------------</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html">   32</a></span>&#160;<span class="keyword">class </span><a class="code" href="classmock_1_1Mock.html">Mock</a> {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#adca4d04617cf39d2747fe3d529fa6b9e">   40</a></span>&#160;    <a class="code" href="classmock_1_1Mock.html#adca4d04617cf39d2747fe3d529fa6b9e">Mock</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    ;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ad7bbb80e7695a093141d25c7b2238767">   49</a></span>&#160;    <a class="code" href="classmock_1_1Mock.html#ad7bbb80e7695a093141d25c7b2238767">~Mock</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    ;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="comment">// ----------------- Arduino Digital I/O --------------------------</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ae37b13d795466a57f1e03eeb35cbf8cd">   63</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#ae37b13d795466a57f1e03eeb35cbf8cd">digitalRead</a>(uint8_t pin) {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    ;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ab7a4ea00836315cb7ab14ca34cae6488">   77</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#ab7a4ea00836315cb7ab14ca34cae6488">digitalWrite</a>(uint8_t pin, uint8_t value) {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    ;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a8d571a2437ee032c58c2db3d530e3832">   90</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#a8d571a2437ee032c58c2db3d530e3832">pinMode</a>(uint8_t pin, uint8_t mode) {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    ;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="comment">//------------------ Arduino Analog I/O ---------------------------</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a2c5752e8199a329d04fed5198cd83724">  104</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#a2c5752e8199a329d04fed5198cd83724">analogRead</a>(uint8_t pin) {</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    ;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ab5c8d7f302bac02a9bbb3004e21fbb93">  118</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#ab5c8d7f302bac02a9bbb3004e21fbb93">analogWrite</a>(uint8_t pin, uint16_t value) {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    ;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    <span class="comment">// --------------------- Arduino Time -----------------------------</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a6bc20ce8e36ab430d0a51b0621c6019f">  130</a></span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="classmock_1_1Mock.html#a6bc20ce8e36ab430d0a51b0621c6019f">millis</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        <span class="keywordflow">return</span> 0L;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    ;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160; </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="comment">// --------------------- Arduino Math -----------------------------</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160; </div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a51af691aeeb4bd147a362386fb9ce2ec">  155</a></span>&#160;    <span class="keyword">static</span> uint32_t <a class="code" href="classmock_1_1Mock.html#a51af691aeeb4bd147a362386fb9ce2ec">map</a>(uint32_t in_value, uint32_t in_min, uint32_t in_max,</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;            uint32_t out_min, uint32_t out_max) {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">return</span> ((in_value - in_min) * (out_max - out_min) / (in_max - in_min)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                + out_min);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;    }</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    ;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="comment">// ------------------ Arduino EEPROM library -----------------------</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;    <span class="comment">// Mocked EEPROM library methods</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#aadb1e54be21b6ebe1c5fc2bdaf1ebbed">  173</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#aadb1e54be21b6ebe1c5fc2bdaf1ebbed">read</a>(uint16_t address) {</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;    ;</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ad281f39ee95c178ea24d30b33d15e956">  187</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#ad281f39ee95c178ea24d30b33d15e956">write</a>(uint16_t address, uint16_t value) {</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    }</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;    ;</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00200"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ac3cab959cf0539df0a118c4410bffa33">  200</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#ac3cab959cf0539df0a118c4410bffa33">update</a>(uint16_t address, uint16_t value) {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;    }</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    ;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a4e4b23687c9be0c9041d3b7ca5c982da">  214</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#a4e4b23687c9be0c9041d3b7ca5c982da">get</a>(uint16_t, uint16_t) {</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;    }</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;    ;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00228"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a301c12481e93625f47da1cb7cd7bdde2">  228</a></span>&#160;    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classmock_1_1Mock.html#a301c12481e93625f47da1cb7cd7bdde2">put</a>(uint16_t address, uint16_t data) {</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;    ;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160; </div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#aa31720511f55e998463e938d38b4e201">  238</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#aa31720511f55e998463e938d38b4e201">length</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;    }</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;    ;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#ac0106bb43262c54ec9513e199a1ca1cb">  249</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#ac0106bb43262c54ec9513e199a1ca1cb">begin</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        <span class="keywordflow">return</span> 0x00;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;    }</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;    ;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;<span class="comment"></span>    <span class="comment">//-----------------------------------------------------------------</span></div>
+<div class="line"><a name="l00260"></a><span class="lineno"><a class="line" href="classmock_1_1Mock.html#a0a535875135966b2910049b9fe1035f1">  260</a></span>&#160;    <span class="keyword">static</span> uint16_t <a class="code" href="classmock_1_1Mock.html#a0a535875135966b2910049b9fe1035f1">end</a>(<span class="keywordtype">void</span>) {</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;        <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;    }</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;    ;</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160; </div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;};</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;<span class="comment">/*  class Mock */</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;} <span class="comment">/* namespace mock */</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160; </div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;<span class="preprocessor">#ifndef ARDUINO</span></div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160; </div>
+<div class="line"><a name="l00274"></a><span class="lineno"><a class="line" href="Mock_8h.html#a5bb885982ff66a2e0a0a45a8ee9c35e2">  274</a></span>&#160;<span class="preprocessor">#define HIGH 0x1            </span></div>
+<div class="line"><a name="l00275"></a><span class="lineno"><a class="line" href="Mock_8h.html#ab811d8c6ff3a505312d3276590444289">  275</a></span>&#160;<span class="preprocessor">#define LOW  0x0            </span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160; </div>
+<div class="line"><a name="l00277"></a><span class="lineno"><a class="line" href="Mock_8h.html#a1bb283bd7893b9855e2f23013891fc82">  277</a></span>&#160;<span class="preprocessor">#define INPUT 0x0           </span></div>
+<div class="line"><a name="l00278"></a><span class="lineno"><a class="line" href="Mock_8h.html#a61a3c9a18380aafb6e430e79bf596557">  278</a></span>&#160;<span class="preprocessor">#define OUTPUT 0x1          </span></div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="Mock_8h.html#a6295096662a20dd56186396e535fbe92">  279</a></span>&#160;<span class="preprocessor">#define INPUT_PULLUP 0x2    </span></div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160; </div>
+<div class="line"><a name="l00281"></a><span class="lineno"><a class="line" href="Mock_8h.html#aa39fdb6674592214dc56eacc0808eec4">  281</a></span>&#160;<span class="preprocessor">#define CHANGE 1            </span></div>
+<div class="line"><a name="l00282"></a><span class="lineno"><a class="line" href="Mock_8h.html#ac00eb6fc2047dc399280f31b0c5f4472">  282</a></span>&#160;<span class="preprocessor">#define FALLING 2           </span></div>
+<div class="line"><a name="l00283"></a><span class="lineno"><a class="line" href="Mock_8h.html#aeea2b49478f3b13faedba764985c6e96">  283</a></span>&#160;<span class="preprocessor">#define RISING 3            </span></div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160; </div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;<span class="comment">// Arduino standard typedef&#39;s</span></div>
+<div class="line"><a name="l00287"></a><span class="lineno"><a class="line" href="Mock_8h.html#aacc262b7acb8ef2b1d38df8b855bc0f6">  287</a></span>&#160;<span class="comment"></span><span class="keyword">typedef</span> uint16_t <a class="code" href="Mock_8h.html#aacc262b7acb8ef2b1d38df8b855bc0f6">word</a>;</div>
+<div class="line"><a name="l00289"></a><span class="lineno"><a class="line" href="Mock_8h.html#af29b166bf5fea7f0bbc07f7014a8c6b5">  289</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">bool</span> <a class="code" href="Mock_8h.html#af29b166bf5fea7f0bbc07f7014a8c6b5">boolean</a>;</div>
+<div class="line"><a name="l00291"></a><span class="lineno"><a class="line" href="Mock_8h.html#ab8ef12fab634c171394422d0ee8baf94">  291</a></span>&#160;<span class="keyword">typedef</span> uint8_t <a class="code" href="Mock_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a>;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160; </div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* MOCK_H_ */</span><span class="preprocessor"></span></div>
+<div class="ttc" id="aMock_8h_html_aacc262b7acb8ef2b1d38df8b855bc0f6"><div class="ttname"><a href="Mock_8h.html#aacc262b7acb8ef2b1d38df8b855bc0f6">word</a></div><div class="ttdeci">uint16_t word</div><div class="ttdef"><b>Definition:</b> Mock.h:287</div></div>
+<div class="ttc" id="aMock_8h_html_ab8ef12fab634c171394422d0ee8baf94"><div class="ttname"><a href="Mock_8h.html#ab8ef12fab634c171394422d0ee8baf94">byte</a></div><div class="ttdeci">uint8_t byte</div><div class="ttdef"><b>Definition:</b> Mock.h:291</div></div>
+<div class="ttc" id="aMock_8h_html_af29b166bf5fea7f0bbc07f7014a8c6b5"><div class="ttname"><a href="Mock_8h.html#af29b166bf5fea7f0bbc07f7014a8c6b5">boolean</a></div><div class="ttdeci">bool boolean</div><div class="ttdef"><b>Definition:</b> Mock.h:289</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html"><div class="ttname"><a href="classmock_1_1Mock.html">mock::Mock</a></div><div class="ttdoc">Arduino Mock methods and mocked Arduino language constructs.</div><div class="ttdef"><b>Definition:</b> Mock.h:32</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_a0a535875135966b2910049b9fe1035f1"><div class="ttname"><a href="classmock_1_1Mock.html#a0a535875135966b2910049b9fe1035f1">mock::Mock::end</a></div><div class="ttdeci">static uint16_t end(void)</div><div class="ttdoc">Mocked EEPROM end().</div><div class="ttdef"><b>Definition:</b> Mock.h:260</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_a2c5752e8199a329d04fed5198cd83724"><div class="ttname"><a href="classmock_1_1Mock.html#a2c5752e8199a329d04fed5198cd83724">mock::Mock::analogRead</a></div><div class="ttdeci">static uint16_t analogRead(uint8_t pin)</div><div class="ttdoc">Mocked Arduino analogRead().</div><div class="ttdef"><b>Definition:</b> Mock.h:104</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_a301c12481e93625f47da1cb7cd7bdde2"><div class="ttname"><a href="classmock_1_1Mock.html#a301c12481e93625f47da1cb7cd7bdde2">mock::Mock::put</a></div><div class="ttdeci">static void put(uint16_t address, uint16_t data)</div><div class="ttdoc">Mocked EEPROM put().</div><div class="ttdef"><b>Definition:</b> Mock.h:228</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_a4e4b23687c9be0c9041d3b7ca5c982da"><div class="ttname"><a href="classmock_1_1Mock.html#a4e4b23687c9be0c9041d3b7ca5c982da">mock::Mock::get</a></div><div class="ttdeci">static uint16_t get(uint16_t, uint16_t)</div><div class="ttdoc">Mocked EEPROM get().</div><div class="ttdef"><b>Definition:</b> Mock.h:214</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_a51af691aeeb4bd147a362386fb9ce2ec"><div class="ttname"><a href="classmock_1_1Mock.html#a51af691aeeb4bd147a362386fb9ce2ec">mock::Mock::map</a></div><div class="ttdeci">static uint32_t map(uint32_t in_value, uint32_t in_min, uint32_t in_max, uint32_t out_min, uint32_t out_max)</div><div class="ttdoc">Re-maps a number from one range to another. That is, a value of in_min would get mapped to out_min,...</div><div class="ttdef"><b>Definition:</b> Mock.h:155</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_a6bc20ce8e36ab430d0a51b0621c6019f"><div class="ttname"><a href="classmock_1_1Mock.html#a6bc20ce8e36ab430d0a51b0621c6019f">mock::Mock::millis</a></div><div class="ttdeci">static uint32_t millis(void)</div><div class="ttdoc">Mocked Arduino millis().</div><div class="ttdef"><b>Definition:</b> Mock.h:130</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_a8d571a2437ee032c58c2db3d530e3832"><div class="ttname"><a href="classmock_1_1Mock.html#a8d571a2437ee032c58c2db3d530e3832">mock::Mock::pinMode</a></div><div class="ttdeci">static void pinMode(uint8_t pin, uint8_t mode)</div><div class="ttdoc">Mocked Arduino pinMode() returns without action.</div><div class="ttdef"><b>Definition:</b> Mock.h:90</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_aa31720511f55e998463e938d38b4e201"><div class="ttname"><a href="classmock_1_1Mock.html#aa31720511f55e998463e938d38b4e201">mock::Mock::length</a></div><div class="ttdeci">static uint16_t length(void)</div><div class="ttdoc">Mocked EEPROM length().</div><div class="ttdef"><b>Definition:</b> Mock.h:238</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_aadb1e54be21b6ebe1c5fc2bdaf1ebbed"><div class="ttname"><a href="classmock_1_1Mock.html#aadb1e54be21b6ebe1c5fc2bdaf1ebbed">mock::Mock::read</a></div><div class="ttdeci">static uint16_t read(uint16_t address)</div><div class="ttdoc">Mocked EEPROM read().</div><div class="ttdef"><b>Definition:</b> Mock.h:173</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_ab5c8d7f302bac02a9bbb3004e21fbb93"><div class="ttname"><a href="classmock_1_1Mock.html#ab5c8d7f302bac02a9bbb3004e21fbb93">mock::Mock::analogWrite</a></div><div class="ttdeci">static void analogWrite(uint8_t pin, uint16_t value)</div><div class="ttdoc">Mocked Arduino analogWrite() returns without action.</div><div class="ttdef"><b>Definition:</b> Mock.h:118</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_ab7a4ea00836315cb7ab14ca34cae6488"><div class="ttname"><a href="classmock_1_1Mock.html#ab7a4ea00836315cb7ab14ca34cae6488">mock::Mock::digitalWrite</a></div><div class="ttdeci">static void digitalWrite(uint8_t pin, uint8_t value)</div><div class="ttdoc">Mocked Arduino digitalWrite() returns without action.</div><div class="ttdef"><b>Definition:</b> Mock.h:77</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_ac0106bb43262c54ec9513e199a1ca1cb"><div class="ttname"><a href="classmock_1_1Mock.html#ac0106bb43262c54ec9513e199a1ca1cb">mock::Mock::begin</a></div><div class="ttdeci">static uint16_t begin(void)</div><div class="ttdoc">Mocked EEPROM begin().</div><div class="ttdef"><b>Definition:</b> Mock.h:249</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_ac3cab959cf0539df0a118c4410bffa33"><div class="ttname"><a href="classmock_1_1Mock.html#ac3cab959cf0539df0a118c4410bffa33">mock::Mock::update</a></div><div class="ttdeci">static void update(uint16_t address, uint16_t value)</div><div class="ttdoc">Mocked EEPROM update() returns without action.</div><div class="ttdef"><b>Definition:</b> Mock.h:200</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_ad281f39ee95c178ea24d30b33d15e956"><div class="ttname"><a href="classmock_1_1Mock.html#ad281f39ee95c178ea24d30b33d15e956">mock::Mock::write</a></div><div class="ttdeci">static void write(uint16_t address, uint16_t value)</div><div class="ttdoc">Mocked EEPROM write() returns without action.</div><div class="ttdef"><b>Definition:</b> Mock.h:187</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_ad7bbb80e7695a093141d25c7b2238767"><div class="ttname"><a href="classmock_1_1Mock.html#ad7bbb80e7695a093141d25c7b2238767">mock::Mock::~Mock</a></div><div class="ttdeci">~Mock(void)</div><div class="ttdoc">Deallocate Mock object.</div><div class="ttdef"><b>Definition:</b> Mock.h:49</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_adca4d04617cf39d2747fe3d529fa6b9e"><div class="ttname"><a href="classmock_1_1Mock.html#adca4d04617cf39d2747fe3d529fa6b9e">mock::Mock::Mock</a></div><div class="ttdeci">Mock(void)</div><div class="ttdoc">Constructor.</div><div class="ttdef"><b>Definition:</b> Mock.h:40</div></div>
+<div class="ttc" id="aclassmock_1_1Mock_html_ae37b13d795466a57f1e03eeb35cbf8cd"><div class="ttname"><a href="classmock_1_1Mock.html#ae37b13d795466a57f1e03eeb35cbf8cd">mock::Mock::digitalRead</a></div><div class="ttdeci">static uint16_t digitalRead(uint8_t pin)</div><div class="ttdoc">Mocked Arduino digitalRead().</div><div class="ttdef"><b>Definition:</b> Mock.h:63</div></div>
+<div class="ttc" id="anamespacemock_html"><div class="ttname"><a href="namespacemock.html">mock</a></div><div class="ttdoc">Arduino mocked methods.</div><div class="ttdef"><b>Definition:</b> Mock.h:25</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
