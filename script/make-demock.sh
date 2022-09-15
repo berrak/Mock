@@ -38,8 +38,8 @@ rpl -m --fixed-strings 'Mock::' '' "$fname"
 rpl -m --fixed-strings '#include <Mock.h>' '' "$fname"
 rpl -m --fixed-strings 'using namespace mock' '' "$fname"
 
-# Mocked EEPROM library fragment democked with ''.
-rpl -m --fixed-strings 'MockEEPROM::' '' "$fname"
+# Mocked MockEEPROM library fragment democked with 'EEPROM'.
+rpl -m --fixed-strings 'MockEEPROM::' 'EEPROM.' "$fname"
 rpl -m --fixed-strings '#include <MockEEPROM.h>' '' "$fname"
 
 echo "Cleansing done!"
