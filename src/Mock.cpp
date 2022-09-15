@@ -1,7 +1,7 @@
 /*!
  * @file Mock.cpp
  *
- * @mainpage The Arduino library replaces Arduino methods with mock methods and lets you develop code without the hardware.
+ * @mainpage The Arduino library replaces Arduino methods with mock methods.
  *
  * @section intro_sec Introduction
  *

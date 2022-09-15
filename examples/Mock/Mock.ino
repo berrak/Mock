@@ -38,46 +38,46 @@ long mapped_value = Mock::map(map_in_value, aread_pin, ADC_BITS-1, aread_pin, MV
 
 void setup() {
 
-    Serial.begin(9600);
-    delay(2000);
+	Serial.begin(9600);
+	delay(2000);
 
-    Serial.println("Mocked Ardiono methods returns zero, or returns directly.");
+	Serial.println("Mocked Ardiono methods returns zero, or returns directly.");
 
-    // Mocked Arduino calls
-    Mock::pinMode(dwrite_pin,OUTPUT);		// digitalWrite
-    Mock::pinMode(awrite_pin,OUTPUT);		// analogWrite
+	// Mocked Arduino calls
+	Mock::pinMode(dwrite_pin,OUTPUT);		// digitalWrite
+	Mock::pinMode(awrite_pin,OUTPUT);		// analogWrite
 
-    Mock::pinMode(dread_pin,INPUT_PULLUP);	// digitalRead
-    Mock::pinMode(aread_pin,INPUT);       	// analogRead - optional
+	Mock::pinMode(dread_pin,INPUT_PULLUP);	// digitalRead
+	Mock::pinMode(aread_pin,INPUT);       	// analogRead - optional
 
 }
 
 void loop() {
 
-    Serial.print("Mock::millis(): ");
-    Serial.println(Mock::millis());
+	Serial.print("Mock::millis(): ");
+	Serial.println(Mock::millis());
 
-    Serial.print("Mock::analogRead(): ");
-    Serial.println(Mock::analogRead(aread_pin));
+	Serial.print("Mock::analogRead(): ");
+	Serial.println(Mock::analogRead(aread_pin));
 
-    Serial.print("Mock::digitalRead(): ");
-    Serial.println(Mock::digitalRead (dread_pin));
+	Serial.print("Mock::digitalRead(): ");
+	Serial.println(Mock::digitalRead (dread_pin));
 
-    Serial.println("Mock::analogWrite(): NOP");
-    Mock::analogWrite (awrite_pin, PWM); 
+	Serial.println("Mock::analogWrite(): NOP");
+	Mock::analogWrite (awrite_pin, PWM);
 
-    Serial.print("Mock::analogRead(): ");
-    Serial.println(Mock::analogRead (aread_pin));
+	Serial.print("Mock::analogRead(): ");
+	Serial.println(Mock::analogRead (aread_pin));
 
-    // map() is not mocked, but included in the
-    // library for Arduino method completeness
-    Serial.print("The map() return value should be ~2500: ");
-    Serial.println(mapped_value);
+	// map() is not mocked, but included in the
+	// library for Arduino method completeness
+	Serial.print("The map() return value should be ~2500: ");
+	Serial.println(mapped_value);
 
-    testMockedDigitalWrite();
+	testMockedDigitalWrite();
 
-    delay(3000);
-    Serial.println();
+	delay(3000);
+	Serial.println();
 
 }
 
@@ -85,13 +85,13 @@ void loop() {
 void testMockedDigitalWrite(void) {
 
 #ifdef LED_BUILTIN
-    Serial.println("10 x Mock::digitalWrite() - LED_BUILTIN will not blink");
-    for (int cnt = 0; cnt < 10 ; cnt++){
-        Mock::digitalWrite(LED_BUILTIN, HIGH);
-        delay(125);
-        Mock::digitalWrite(LED_BUILTIN, LOW);
-        delay(125);
-    }
+	Serial.println("10 x Mock::digitalWrite() - LED_BUILTIN will not blink");
+	for (int cnt = 0; cnt < 10 ; cnt++){
+		Mock::digitalWrite(LED_BUILTIN, HIGH);
+		delay(125);
+		Mock::digitalWrite(LED_BUILTIN, LOW);
+		delay(125);
+	}
 #endif
 }
 
