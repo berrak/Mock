@@ -31,7 +31,7 @@ Pre-pend all Arduino's calls with '`Mock::`', like this.
 ```cpp
 int value = Mock::analogRead(analog_read_pin);
 ```
-The mocked functions return immediately or return zero. To remove all mocking fragments, use either search/replace in the IDE, or run the `make-demock.sh` shell script on the file to erase all added `mock` -fragments.
+The mocked functions return immediately or return zero. To remove all mocking fragments, use either search/replace in the IDE, or run the `make-demock.sh` shell script (recommended method) on the file(s) to erase all added `mock` -fragments.
 
 
 ## Examples
@@ -77,7 +77,7 @@ make-demock.sh other.h
 ```
 ## Planned Improvements/Changes
 
-For planned changes, improvements, and known bugs, please visit the [Github issues tracker](https://github.com/berrak/Mock/issues). Unfortunately, they're not yet 100% coverage of Arduino methods, but only the most common. Testing more on other architectures and boards than Arduino Uno is also on the list of upcoming activities.
+For planned changes, improvements, and known bugs, please visit the [Github issues tracker](https://github.com/berrak/Mock/issues).
 
 ## Other related libraries
 
