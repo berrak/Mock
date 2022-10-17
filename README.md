@@ -3,6 +3,7 @@
 [![GitHub issues](https://img.shields.io/github/issues/berrak/Mock.svg?logo=github&logoColor=ffffff)](https://github.com/berrak/Mock/issues)
 [![Documentation](https://img.shields.io/badge/documentation-doxygen-green.svg)](https://berrak.github.io/Mock/classmock_1_1Mock.html)
 [![Installation instructions](https://www.ardu-badge.com/badge/Mock.svg?)](https://www.ardu-badge.com/Mock)
+![Badge Hit Counter](https://visitor-badge.laobi.icu/badge?page_id=berrak_Mock)
 
 # Arduino library Mock
 Replace Arduino methods with `mocked` versions and let you develop code without the hardware. The mocked functions return immediately or return zero. Run parallel hardware and system development for greater efficiency. Arduino's command line tool, such as [arduino-cli](https://github.com/arduino/arduino-cli), frees you from Arduino IDE for tests and uploads.
