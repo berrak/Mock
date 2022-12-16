@@ -57,6 +57,9 @@ void loop() {
 	Serial.print("Mock::millis(): ");
 	Serial.println(Mock::millis());
 
+	Serial.println("Mock::delay(): NOP");
+	Mock::delay(100);
+
 	Serial.print("Mock::analogRead(): ");
 	Serial.println(Mock::analogRead(aread_pin));
 

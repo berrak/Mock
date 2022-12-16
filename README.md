@@ -40,6 +40,7 @@ The mocked functions return immediately or return zero. To remove all mocking fr
 In Arduino IDE scroll down the long list below `File->Examples` and find `Mock`. An example run of the example may look like the following screen output. Note that a majority of the mocked methods return zero or return immediately. The `map()`-call is an exception and is defined as in Arduino.
 ```
 Mock::millis(): 0
+Mock::delay(): NOP
 Mock::analogRead(): 0
 Mock::digitalRead(): 0
 Mock::analogWrite(): NOP
