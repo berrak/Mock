@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['analogread_35',['analogRead',['../classmock_1_1Mock.html#a2c5752e8199a329d04fed5198cd83724',1,'mock::Mock']]],
-  ['analogwrite_36',['analogWrite',['../classmock_1_1Mock.html#ab5c8d7f302bac02a9bbb3004e21fbb93',1,'mock::Mock']]]
+  ['analogread_37',['analogRead',['../classmock_1_1Mock.html#a2c5752e8199a329d04fed5198cd83724',1,'mock::Mock']]],
+  ['analogwrite_38',['analogWrite',['../classmock_1_1Mock.html#ab5c8d7f302bac02a9bbb3004e21fbb93',1,'mock::Mock']]]
 ];
