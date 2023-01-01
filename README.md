@@ -32,7 +32,7 @@ Pre-pend all Arduino's calls with '`Mock::`', like this.
 ```cpp
 int value = Mock::analogRead(analog_read_pin);
 ```
-The mocked functions return immediately or return zero. To remove all mocking fragments, use either search/replace in the IDE, or run the `make-demock.sh` shell script (recommended method) on the file(s) to erase all added `mock` -fragments.
+The mocked functions return immediately or return zero. To remove all mocking fragments, run the `make-demock.sh` shell script (recommended method) on the file(s) to erase all added `mock` -fragments.
 
 
 ## Examples
@@ -40,7 +40,9 @@ The mocked functions return immediately or return zero. To remove all mocking fr
 In Arduino IDE scroll down the long list below `File->Examples` and find `Mock`. An example run of the example may look like the following screen output. Note that a majority of the mocked methods return zero or return immediately. The `map()`-call is an exception and is defined as in Arduino.
 ```
 Mock::millis(): 0
+Mock::micros(): 0
 Mock::delay(): NOP
+Mock::delayMicroseconds(): NOP
 Mock::analogRead(): 0
 Mock::digitalRead(): 0
 Mock::analogWrite(): NOP
@@ -69,7 +71,7 @@ or use the alternative manual installation procedure.
 
 In the `script` folder is the canonical `make-demock.sh` shell script for removing any mock fragments in the released code. Ensure that your Arduino installation uses the latest version of `Mock`.
 
-This script uses various CLI tools, most noticeable [rpl](https://github.com/rrthomas/rpl), that replace text strings in files. This tool is most likely installable with your package manager. Finally, the script use `grep` to ensure it does not find any mock fragments in the release code.
+This script uses various CLI tools, most noticeable [rpl](https://github.com/rrthomas/rpl), that replace text strings in files. This tool is most likely installable with pythons pip package manager. Finally, the script use `grep` to ensure it does not find any mock fragments in the release code.
 
 Run it with the file name, as the argument, like so.
 ```

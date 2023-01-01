@@ -1,30 +1,13 @@
-#######################################
 # Mock
+# Note: Only ONE true tab-char to separate items!
 # Syntax Coloring Map
-#######################################
 
-#######################################
-# Datatypes (DATA_TYPE)
-#######################################
+# Datatypes: (KEYWORD1)
+# Classes & Namespaces: (KEYWORD2)
+# Methods and Functions: (KEYWORD2)
+# Structure: (KEYWORD3)
+# Constants: (LITERAL1)
 
-#######################################
-# Classes & Namespaces (KEYWORD1)
-#######################################
-
-Mock	KEYWORD1
-mock	KEYWORD1
-
-#######################################
-# Methods and Functions (KEYWORD2)
-#######################################
-
-
-#######################################
-# Instances (KEYWORD3)
-#######################################
-
-######################################
-# Constants (LITERAL1)
-#######################################
-
+Mock	KEYWORD2
+mock	KEYWORD2
 

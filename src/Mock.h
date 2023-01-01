@@ -132,6 +132,16 @@ public:
 	}
 	;
 
+	//-----------------------------------------------------------------
+	/*!
+	 @brief  Mocked Arduino micros().
+	 @return Returns 0.
+	 */
+	//-----------------------------------------------------------------
+	static uint32_t micros(void) {
+		return 0L;
+	}
+	;
 
 	//-----------------------------------------------------------------
 	/*!
@@ -145,6 +155,17 @@ public:
 	}
 	;
 
+	//-----------------------------------------------------------------
+	/*!
+	 @brief  Mocked Arduino delayMicroseconds().
+	 @param  us_delay
+	 The time to pause the code execution.
+	 */
+	//-----------------------------------------------------------------
+	static void delayMicroseconds(uint32_t us_delay) {
+		;
+	}
+	;
 
 	// --------------------- Arduino Math -----------------------------
 
@@ -221,11 +242,11 @@ public:
 	 @param  address
 	 Read from EEPROM address.
 	 @param  data
-	 Read data from EEPROM address.
+	 Read any data type or object from the EEPROM.
 	 @return The mocked get() value, i.e., zero.
 	 */
 	//-----------------------------------------------------------------
-	static uint16_t get(uint16_t, uint16_t) {
+	static uint16_t get(uint16_t address, uint16_t data) {
 		return 0;
 	}
 	;
